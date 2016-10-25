@@ -20,18 +20,50 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
     public void operacio(View s){
+        Button b = (Button)s;
         String text=res.getText().toString();
         num = Float.parseFloat(text);
         text="";
         res.setText(text);
+        op=b.getText().charAt(0);
     }
 
     public void resol(){
-
+        float n;
+        float r;
+        String text;
+        switch(op){
+            case '/':
+                n=Float.parseFloat(res.getText().toString());
+                r=num/n;
+                text = String.format("%f", r);
+                res.setText(text);
+                break;
+            case'x':
+                n=Float.parseFloat(res.getText().toString());
+                r=num*n;
+                text = String.format("%f", r);
+                res.setText(text);
+                break;
+            case'-':
+                n=Float.parseFloat(res.getText().toString());
+                r=num-n;
+                text = String.format("%f", r);
+                res.setText(text);
+                break;
+            case'+':
+                n=Float.parseFloat(res.getText().toString());
+                r=num+n;
+                text = String.format("%f", r);
+                res.setText(text);
+                break;
+        }
     }
 
     public void clear(){
-
+        String text="";
+        res.setText(text);
+        num=0;
     }
 
     @Override
