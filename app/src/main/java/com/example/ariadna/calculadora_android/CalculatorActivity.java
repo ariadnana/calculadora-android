@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class CalculatorActivity extends AppCompatActivity {
     float num=0;
     char op='n';
-    final TextView res = (TextView) findViewById(R.id.text);
+    private TextView res;
 
     public void display(View v){
         Button b = (Button)v;
@@ -38,5 +38,8 @@ public class CalculatorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
+
+        res = (TextView) findViewById(R.id.text);
+
     }
 }
