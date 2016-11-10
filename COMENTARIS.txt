@@ -1,0 +1,21 @@
+
+Guay:
+- El layout està força bé (Interessant el "?attr/colorBackgroundFloating", m'ha molat).
+- Un cop arreglats els problemes, funciona força bé (tot i no haver pogut provar la part
+  dels càlculs, no?).
+- Codi concís i directe. Funciona fer operacions en cadena (5 x 5 = x 5 = x 5 = ...)
+
+A millorar:
+- No funciona! Peta quan intentes fer una operació. L'error està en que el mètode "resol" no té
+  els paràmetres que ha de tenir i el onClick no el troba (hauria de ser):
+
+      public void resol(View v)
+
+  (falta el paràmetre "View v", ho arreglo...)
+
+- Mateixa història amb el "clear" (també ho arreglo).
+- Molaria fer que no surtin els zeros dels enters.
+
+
+
+

@@ -12,14 +12,14 @@ public class CalculatorActivity extends AppCompatActivity {
     char op='n';
     private TextView res;
 
-    public void display(View v){
+    public void display(View v) {
         Button b = (Button)v;
         String text=res.getText().toString();
         text=text+b.getText();
         res.setText(text);
     }
 
-    public void operacio(View s){
+    public void operacio(View s) {
         Button b = (Button)s;
         String text=res.getText().toString();
         num = Float.parseFloat(text);
@@ -28,11 +28,11 @@ public class CalculatorActivity extends AppCompatActivity {
         op=b.getText().charAt(0);
     }
 
-    public void resol(){
+    public void resol(View v) {
         float n;
         float r;
         String text;
-        switch(op){
+        switch(op) {
             case '/':
                 n=Float.parseFloat(res.getText().toString());
                 r=num/n;
@@ -60,7 +60,7 @@ public class CalculatorActivity extends AppCompatActivity {
         }
     }
 
-    public void clear(){
+    public void clear(View v) {
         String text="";
         res.setText(text);
         num=0;
@@ -70,8 +70,6 @@ public class CalculatorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-
         res = (TextView) findViewById(R.id.text);
-
     }
 }
